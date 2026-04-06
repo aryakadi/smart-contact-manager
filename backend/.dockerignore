@@ -1,0 +1,18 @@
+# Build directories
+target/
+.mvn/
+mvnw
+mvnw.cmd
+
+# IDE and OS files
+.idea/
+.settings/
+.classpath
+.project
+*.iml
+.DS_Store
+.vscode/
+
+# Environment files
+.env
+.env.*
