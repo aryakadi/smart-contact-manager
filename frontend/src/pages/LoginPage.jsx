@@ -107,7 +107,7 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <p className="relative text-sm" style={{ color: '#334155' }}>© 2025 Smart Contact Manager</p>
+        <p className="relative text-sm" style={{ color: '#334155' }}>© 2026 Smart Contact Manager</p>
       </div>
 
       {/* Right panel — form */}

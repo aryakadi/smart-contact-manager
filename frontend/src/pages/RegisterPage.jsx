@@ -67,7 +67,7 @@ export default function RegisterPage() {
             Start managing your contacts with a free account today.
           </p>
         </div>
-        <p className="text-primary-300 text-sm">© 2025 Smart Contact Manager</p>
+        <p className="text-primary-300 text-sm">© 2026 Smart Contact Manager</p>
       </div>
 
       {/* Right form panel */}
