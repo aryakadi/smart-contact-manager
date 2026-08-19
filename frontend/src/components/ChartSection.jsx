@@ -42,22 +42,8 @@ function DonutCenterLabel({ cx, cy, total }) {
 }
 
 export default function ChartSection({ groupStats, weeklyStats }) {
-  const safeGroupStats = groupStats?.length ? groupStats : [
-    { name: 'Family', value: 4 },
-    { name: 'Work', value: 12 },
-    { name: 'Friends', value: 6 },
-    { name: 'College', value: 8 },
-  ]
-
-  const safeWeeklyStats = weeklyStats?.length ? weeklyStats : [
-    { name: 'Mon', added: 2 },
-    { name: 'Tue', added: 5 },
-    { name: 'Wed', added: 3 },
-    { name: 'Thu', added: 8 },
-    { name: 'Fri', added: 4 },
-    { name: 'Sat', added: 1 },
-    { name: 'Sun', added: 0 },
-  ]
+  const safeGroupStats = groupStats || []
+  const safeWeeklyStats = weeklyStats || []
 
   const totalContacts = safeGroupStats.reduce((acc, cur) => acc + (cur.value || 0), 0)
 

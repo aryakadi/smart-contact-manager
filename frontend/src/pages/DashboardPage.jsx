@@ -42,9 +42,9 @@ export default function DashboardPage() {
         const [contactsData, totalCountData, favCountData, groupStatsData, weeklyStatsData] =
           await Promise.all([contactsReq, countReq, favCountReq, groupStatsReq, weeklyStatsReq])
 
-        const totalContacts = typeof totalCountData === 'number' ? totalCountData : (totalCountData.count || 124)
-        const favoriteContacts = typeof favCountData === 'number' ? favCountData : (favCountData.count || 32)
-        const totalGroups = groupStatsData.length || 4
+        const totalContacts = typeof totalCountData === 'number' ? totalCountData : (totalCountData.count || 0)
+        const favoriteContacts = typeof favCountData === 'number' ? favCountData : (favCountData.count || 0)
+        const totalGroups = groupStatsData?.length || 0
         const recentlyAdded = weeklyStatsData.reduce((acc, curr) => acc + (curr.added || 0), 0)
 
         setStats({ totalContacts, favoriteContacts, totalGroups, recentlyAdded })
